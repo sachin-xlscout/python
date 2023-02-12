@@ -4,6 +4,11 @@ from youtube_transcript_api import YouTubeTranscriptApi
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET'])
+def hello_world():
+    return 'Caption Serach APi!'
+
+
 @app.route('/getcaption', methods=['POST'])
 def post_data():
     try:
@@ -17,4 +22,4 @@ def post_data():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8000)
