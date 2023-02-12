@@ -14,7 +14,6 @@ def post_data():
     try:
         data = request.get_json()
         srt = YouTubeTranscriptApi.get_transcript(data["id"])
-        print(data["id"])
         # Do something with the received data
         return srt
     except Exception as e:
